@@ -5,12 +5,13 @@ import Details from '../containers/details';
 
 //Это такая упрощенная форма написания ф-ции... 0_О
 const WebPage = () => (
-    <div>
-        <h2>Clients:</h2>
-        <ClientsList />
-        <hr />
-        <h3>Details:</h3>
-        <Details />
+    <div className="container clearfix">
+        <div className="left-col">
+            <ClientsList />
+        </div>
+        <div className="right-col">
+            <Details />
+        </div>
     </div>
 );
 

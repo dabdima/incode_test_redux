@@ -1,6 +1,6 @@
-export const select = (clients) => {
+export const select = (client) => {
     return {
         type: "CLIENT_SELECTED",
-        payload: clients
+        payload: client
     }
 };
