@@ -11,10 +11,10 @@ import {createStore} from 'redux';
 import allReducers from './reducers';
 import WebPage from './components/WebPage';
 
-const store = createStore (allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store01 = createStore (allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={store01}>
     <WebPage />
     </Provider>,
     document.getElementById('fieldToShow')

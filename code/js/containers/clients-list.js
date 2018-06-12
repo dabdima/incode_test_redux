@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import {bindActionCreators} from 'redux';
-import {connect} from 'react-redux';
-import {select} from '../actions/index';
+import {bindActionCreators} from 'redux'; //помогает создавать действия (см. ниже описание про matchDispatchToProps)
+import {connect} from 'react-redux'; // ф-ция, нужна для работы mapStateToProps
+import {select} from '../actions/index'; // импорт ф-ции select, кот. описана в папке actions
 
 class ClientsList extends Component {
 
@@ -30,15 +30,19 @@ class ClientsList extends Component {
     }
 }
 
+// mapStateToProps - берет состояное(state) из массива clients-list.js и вставляет его в компонент ClientsList в качестве св-в (props)
 function mapStateToProps (state) {
     return {
         clients: state.clients
     };
 }
 
+//matchDispatchToProps - ф-ция, необходимая для приведения ф-ции select(кот. описана в папке actions) к св-ву (props)
 function matchDispatchToProps (dispatch) {
+    //и потом эта ф-ция возвращает св-во:
     return bindActionCreators({select: select}, dispatch)
 }
 
+// connect - ф-ция, нужна для работы mapStateToProps , matchDispatchToProps
 export default connect(mapStateToProps,
 matchDispatchToProps)(ClientsList);
