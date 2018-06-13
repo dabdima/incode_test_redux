@@ -6,7 +6,7 @@ import {select} from '../actions/index'; // импорт ф-ции select, ко�
 class ClientsList extends Component {
 
     showList () {
-        return this.props.clients.map ((client) => {
+        return (this.props.filtered || this.props.clients).map ((client) => {
             return (
                 <li className="client-block" onClick={() => this.props.select (client)} key={client.id}>
                     <div className="client-block-avatar">
@@ -33,6 +33,7 @@ class ClientsList extends Component {
 // mapStateToProps - берет состояное(state) из массива clients-list.js и вставляет его в компонент ClientsList в качестве св-в (props)
 function mapStateToProps (state) {
     return {
+        filtered: state.filtered,
         clients: state.clients
     };
 }
