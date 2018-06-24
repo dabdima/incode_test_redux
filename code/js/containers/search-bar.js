@@ -5,7 +5,12 @@ import {bindActionCreators} from 'redux';
 
 class SearchBar extends Component {
     render () {
-        return (<input type="text" className="search-input" placeholder="Search..." onChange={(e) => this.props.filterClients (e, this.props.clients)} />);
+        return (
+            <div className="ui icon input search-input">
+                <input type="text"  placeholder="Search..." onChange={(e) => this.props.filterClients (e, this.props.clients)} />
+                <i className="circular search link icon"></i>
+            </div>
+        );
     }
 }
 

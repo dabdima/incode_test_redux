@@ -12,7 +12,7 @@
 #fieldToShow {
     width: 960px;
     margin: 0 auto;
-    height: 100%;
+    min-height: 100%;
     background-color: #fbfbfb;
 }
 
@@ -22,34 +22,34 @@
 }
 
 .left-col {
-    width: 400px;
+    width: 300px;
     height: 100%;
     background-color: #f7f7f7;
     float: left;
 }
 
 .right-col {
-    width: 555px;
+    width: 655px;
     height: 100%;
-    background-color: #fcfcfc;
-    border: 1px solid #ccc;
+    /* background-color: #fcfcfc; */
+    /* border: 1px solid #ccc; */
     margin-top: 3px;
     padding: 10px;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     float: right;
 }
 
 .search-input {
-    font-size: 20px;
+    /* font-size: 20px; */
     width: 100%;
-    height: 50px;
-    border: 1px solid #ccc;
+    /* height: 50px; */
+    /* border: 1px solid #ccc; */
     margin-top: 3px;
-    padding: 10px;
+    /* padding: 10px; */
     border-radius: 4px;
-    background: url(../img/nav-search_icon.png) no-repeat;
-    background-size: 38px 38px;
-    background-position: 99% 50%;
+    /* background: url(../img/nav-search_icon.png) no-repeat; */
+    /* background-size: 38px 38px; */
+    /* background-position: 99% 50%; */
 }
 
 
