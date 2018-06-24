@@ -3,32 +3,6 @@ import {bindActionCreators} from 'redux'; //помогает создавать 
 import {connect} from 'react-redux'; // ф-ция, нужна для работы mapStateToProps
 import {select} from '../actions/index'; // импорт ф-ции select, кот. описана в папке actions
 
-// class ClientsList extends Component {
-//
-//     showList () {
-//         return (this.props.filtered || this.props.clients).map ((client) => {
-//             return (
-//                 <li className="client-block" onClick={() => this.props.select (client)} key={client.id}>
-//                     <div className="client-block-avatar">
-//                         <img src={client.general.avatar} width="128px" height="128px" alt=""/>
-//                     </div>
-//                     <div className="client-block-inf">
-//                         <h3>{client.general.firstName} {client.general.lastName}</h3>
-//                         <p>{client.job.title}</p>
-//                     </div>
-//                 </li>
-//             );
-//         });
-//     }
-//
-//     render () {
-//         return (
-//             <ol>
-//                 {this.showList ()}
-//             </ol>
-//         );
-//     }
-// }
 class ClientsList extends Component {
 
     showList() {
